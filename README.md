@@ -1,6 +1,6 @@
 # Master Thesis Code Repository
 
-This repository contains experiment, hyperparameter-optimization, downstream-analysis, diagnostic, and visualization code used for the master's thesis *Implementation and Benchmarking of Three-Dimensional Variational Autoencoders for Analysis of Stroke Imaging*.
+This repository contains experiment, hyperparameter optimization, downstream-analysis, diagnostic, and visualization code used for the master's thesis *Implementation and Benchmarking of Three-Dimensional Variational Autoencoders for Analysis of Stroke Imaging*.
 
 ## Relation to AUTOENCODIX
 
@@ -26,7 +26,7 @@ masterthesis_repository/
 │   ├── benchmark/           Imagix3D runtime / performance benchmarking
 │   ├── data/                Data-preparation and annotation-generation utilities
 │   └── notebooks/           Report notebook templates used for model evaluation
-└── jobs/                    Cluster job scripts used to execute the experiments
+└── jobs/                    Job scripts used to execute the experiments
 ```
 
 ## Analysis workflow
@@ -65,7 +65,7 @@ The repository does not contain patient imaging data, clinical outcome data, or 
 
 ## Reproducibility scope
 
-This repository is intended to make the computational workflow of the thesis **traceable and partially reproducible**, rather than to provide a fully automated end-to-end reproduction from raw data.
+This repository is intended to make the computational workflow of the thesis **traceable and partially reproducible**, but does not provide a fully automated end-to-end reproduction from raw data.
 
 Given access to the corresponding input data and a compatible AUTOENCODIX version, the repository provides the main code used for:
 
