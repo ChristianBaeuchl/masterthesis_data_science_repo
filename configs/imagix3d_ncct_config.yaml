@@ -1,0 +1,131 @@
+data_config:
+  data_info:
+    IMG:
+      file_path: /data/horse/ws/baeuchl-imagix3d/data/stroke_data/ncct_flat
+      data_type: IMG
+      scaling: NONE
+      filtering: VAR
+      sep: null
+      extra_anno_file: null
+      is_single_cell: false
+      min_cells: 0.05
+      min_genes: 0.02
+      selected_layers:
+        - X
+      is_X: false
+      normalize_counts: true
+      log_transform: false
+      k_filter: null
+      img_width_resize: 64
+      img_height_resize: 64
+      translate_direction: null
+      pretrain_epochs: null
+      learning_rate: null
+      weight_decay: null
+      beta: null
+    ANNO:
+      file_path: /data/horse/ws/baeuchl-imagix3d/data/stroke_data/ncct_anno_dst.csv
+      data_type: ANNOTATION
+      scaling: NOTSET
+      filtering: VAR
+      sep: null
+      extra_anno_file: null
+      is_single_cell: false
+      min_cells: 0.05
+      min_genes: 0.02
+      selected_layers:
+        - X
+      is_X: false
+      normalize_counts: true
+      log_transform: false
+      k_filter: null
+      img_width_resize: 64
+      img_height_resize: 64
+      translate_direction: null
+      pretrain_epochs: null
+      learning_rate: null
+      weight_decay: null
+      beta: null
+  require_common_cells: false
+  annotation_columns: null
+
+annotation_columns: null
+img_path_col: filepath
+requires_paired: true
+data_case: IMG<->IMG
+k_filter: null
+scaling: NONE
+skip_preprocessing: false
+class_param: null
+
+latent_dim: 96
+hidden_dim: 32
+n_layers: 3
+enc_factor: 4
+
+maskix_hidden_dim: 256
+maskix_swap_prob: 0.4
+drop_p: 0.1
+save_memory: false
+save_vram: true
+
+learning_rate: 3.1484983656998606e-05
+compile_model: false
+pin_memory: false
+batch_size: 35
+epochs: 250
+weight_decay: 7.737374408547984e-06
+
+reconstruction_loss: mse
+default_vae_loss: kl
+loss_reduction: mean
+beta: 6.718196015256182e-07
+beta_mi: 1
+beta_tc: 1
+beta_dimKL: 1
+use_mss: true
+
+gamma: 10.0
+delta_pair: 5.0
+delta_class: 5.0
+delta_mask_predictor: 0.7
+delta_mask_corrupted: 0.75
+maskix_architecture: scMAE
+
+min_samples_per_split: 1
+anneal_function: logistic-late
+pretrain_epochs: 0
+grad_clip_max_norm: 5
+
+device: auto
+n_gpus: 1
+checkpoint_interval: 10
+float_precision: '32'
+gpu_strategy: auto
+
+train_ratio: 0.7
+test_ratio: 0.2
+valid_ratio: 0.1
+
+reproducible: false
+global_seed: 1
+profiling: false
+profile_logs: profile
+
+n_conv_layers_3d: 5
+spatial_shape_policy: crop_or_pad_to_shape
+target_multiple: 32
+target_shape_3d:
+  - 160
+  - 192
+  - 160
+padding_mode_3d: 0
+normalize_nonzero_only: true
+volume_scaling_strategy: per_volume
+clamp_logvar: true
+logvar_range:
+  - -10
+  - 20
+keep_mu_positive: false
+train_normalization: instance
+train_norm_groupsize: 8
